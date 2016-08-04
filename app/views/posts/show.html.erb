@@ -1,0 +1,15 @@
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<% if policy(@post).destroy? %>
+  <%= link_to "Destroy post", @post, method: :delete, :class => "btn btn-default" %>
+<% end %>
+
+<%= link_to "Go to index", posts_path %>
